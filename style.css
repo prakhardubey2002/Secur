@@ -26,11 +26,13 @@ body::-webkit-scrollbar-thumb {
 }
 body{
     font-family: 'Poppins',sans-serif;
-    background: var(--secondary);
+   
+    background: plum;
     background: -webkit-linear-gradient(to right, var(--primary), var(--secondary)); 
     background: linear-gradient(to right, var(--primary), var(--secondary));
     width: 100vw;
     overflow-x: hidden;
+
 }
 
 .sidebar{
@@ -79,8 +81,10 @@ body{
     display: none;
 }
 label #btne,label #cancel{
+    z-index: 1000000000;
     position: absolute;
     cursor: pointer;
+   
     /* background: var(--quartenary); */
     
     
@@ -89,7 +93,7 @@ label #btne{
     position: fixed;
     left: 5px;
     top: 5px;
-    font-size: 35px;
+    font-size: 18px;
     color: white;
     padding: 6px 12px;
     transition: all 0.5s;
@@ -99,7 +103,7 @@ label #cancel{
     z-index: 1111;
     left: -195px;
     top: 17px;
-    font-size: 30px;
+    font-size: 18px;
     color: var(--tertiary);
     padding: 4px 9px;
     transition: all 0.5s ease-in-out; 
@@ -118,6 +122,7 @@ label #cancel{
 .rex{
     display: none;
 }
+
 .home{
     width: 100vw;
     height: 100vh;
@@ -160,6 +165,8 @@ label #cancel{
 }
 .home .homedata{
     /* padding: 1rem; */
+    position: absolute;
+    top: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,6 +280,114 @@ label #cancel{
     transform: translate(-50%, -40%);
     animation: fly 4s ease-in-out infinite;
 }
+.c{
+    width: 100vw;
+    height: 120vh;
+}
+.c .container{
+    width: 80%;
+    margin: 50px auto;
+    
+}
+.c .container .contact-box{
+    background: var(--tertiary);
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+   
+}
+.c .container .contact-box .contact-left{
+    flex-basis: 60%;
+    padding: 40px 60px;
+    border-radius: 2rem;
+}
+.c .container .contact-box .contact-left h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+ .c .contact-right{
+    flex-basis: 40%;
+    padding: 40px ;
+    background: blue;
+    color: wheat;
+    border-radius: 2rem;
+}
+.c .contact-right ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+   
+}
+.c .contact-right ul li{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+
+    
+}
+.c .contact-right ul li:nth-child(1){
+    margin-top: 0.5rem;
+}
+.c .contact-right ul li i{
+    margin-right: 0.8rem;
+    padding-top: 5px;
+}
+.c .container h1{
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 300;
+    font-size: 2.2rem;
+}
+.c .container .contact-box .input-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.c .container .contact-box .input-row .input-group{
+    /* flex-basis: 45%; */
+    display: flex;
+    flex-direction: column;
+   
+}
+.c .container .contact-box .input-row .input-group input{
+    padding: 0.5rem;
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+.c .container .contact-box .area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.c .container .contact-box .area textarea{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    resize: none;
+}
+.c .container .contact-box .submit{
+    margin-top: 1rem;
+    background: #5ed8b3;
+    padding: 0.8rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    outline: none;
+    transition: 0.4s all ease;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+.c .container .contact-box .submit:hover{
+    transform: scale(1.1);
+    transition: 0.4s all ease;
+}
 @keyframes fly {
     0% {
       transform: translate(-50%, -46%);
@@ -309,28 +424,84 @@ label #cancel{
       font-weight: 400;
       font-size: 2.8rem;
   }
+  .secondlastsection{
+    width: 100vw;
+    min-height: 100vh;
+    background: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .secondlastsection .cardbox{
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom:  1rem; 
+    padding-top:  1rem; 
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+  /* .secondlastsection .cardbox:after{
+    position: absolute;
+    content: '';
+    width: 500px;
+    height: 200px;
+    color: white;
+
+  } */
+  .secondlastsection .cardbox:nth-child(1){
+    margin-top: 2rem;
+  }
+  .secondlastsection .cardbox h3{
+    color: #e2e2e2;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .secondlastsection .cardbox p{
+    color: #b3bdbd;
+    line-height: 1.8rem;
+    font-weight: 500;
+  }
+  footer{
+      width: 100vw;
+      height: 10vh;
+      background: var(--quartenary);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   @Media only screen and (max-width: 768px){
     .home nav{
         display: none;
     }
     .home{
-        height: 135vw;
+        height: 87vh;
+        position: relative;
     }
     .rex{
         display: block;
     }
     .home .homedata{
+        position: absolute;
+        top: 20%;
         padding: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        /* top: 2%; */
     }
     .home .homedata .cont h2{
         font-size: 1.8rem;
     }
     .home .homedata .img {
-        margin-top: 6rem;
+        /* margin-top: 6rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -374,21 +545,28 @@ label #cancel{
        justify-content: center;
    }
    .Aboutus .conte .img img{
-       max-width: 60%;
+       max-width: 90%;
    }
+   /* #rellax{
+       width: 10vw;
+   } */
    .Aboutus .conte{
        display: flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
        padding: 1rem;
+       max-width: 75%;
+       
    }
    .Aboutus .conte h2{
        font-size: 1.8rem;
    } 
    .Aboutus .conte p{
        font-size: 0.8rem;
+       word-spacing: 0.2rem;
        line-height: 0.9rem;
+
    }
    .vision .vise .img{
        display: flex;
@@ -409,7 +587,34 @@ label #cancel{
    .vision .vis p{
        font-size: 1rem;
    }
+   .use{
+       height: 70vh;
+   }
    .use .h2s h2{
        font-size: 2rem;
    }
+   .c .contact-right{
+    display: none;
+}
+.c .container .contact-box .contact-left{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* max-height: 80vh; */
+   font-size: 1rem;
+}
+.c .container .contact-box .input-row .input-group input{
+    width: 95%;
+}
+.c{
+    position: relative;
+}
+.c .container h1{
+    display: none;
+}
+.c .container .contact-box .area{
+    width: 100%;
+}
   }
